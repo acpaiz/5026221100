@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\KeyboardDBController;
 
 Route::get('/', function () {
     return view('5026221100');
@@ -65,5 +66,18 @@ Route::post('/pegawai/store','App\Http\Controllers\PegawaiDBController@store');
 
 Route::get('/pegawai/edit/{id}','App\Http\Controllers\PegawaiDBController@edit');
 Route::post('/pegawai/update','App\Http\Controllers\PegawaiDBController@update');
-Route::get('/pegawai/hapus/{id}','App\Http\Controllers\PegawaiDBController@hapus');
+Route::get('/pegawai/delete/{id}','App\Http\Controllers\PegawaiDBController@hapus');
 Route::get('/pegawai/cari','App\Http\Controllers\PegawaiDBController@cari');
+
+//route CRUD Keyboard
+Route::get('/keyboard','App\Http\Controllers\KeyboardDBController@index');
+Route::get('/keyboard/tambah','App\Http\Controllers\KeyboardDBController@tambah');
+Route::post('/keyboard/store','App\Http\Controllers\KeyboardDBController@store');
+
+Route::get('/keyboard/edit/{id}','App\Http\Controllers\KeyboardDBController@edit');
+Route::post('/keyboard/update','App\Http\Controllers\KeyboardDBController@update');
+Route::get('/keyboard/delete/{id}','App\Http\Controllers\KeyboardDBController@hapus');
+Route::get('/keyboard/cari','App\Http\Controllers\KeyboardDBController@cari');
+Route::get('/keyboard/update-status','App\Http\Controllers\KeyboardDBController@updateStatus');
+
+Route::patch('/keyboard/update-status/{kodekeyboard}', [KeyboardDBController::class, 'updateStatus']);

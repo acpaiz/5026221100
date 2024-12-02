@@ -69,7 +69,7 @@ Route::post('/pegawai/update','App\Http\Controllers\PegawaiDBController@update')
 Route::get('/pegawai/delete/{id}','App\Http\Controllers\PegawaiDBController@hapus');
 Route::get('/pegawai/cari','App\Http\Controllers\PegawaiDBController@cari');
 
-//route CRUD Keyboard
+//route CRUD Keyboard f
 Route::get('/keyboard','App\Http\Controllers\KeyboardDBController@index');
 Route::get('/keyboard/tambah','App\Http\Controllers\KeyboardDBController@tambah');
 Route::post('/keyboard/store','App\Http\Controllers\KeyboardDBController@store');

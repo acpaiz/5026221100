@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <nav class="navbar navbar-expand-sm bg-light">
+
+    <div class="container-fluid">
+      <!-- Links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/pegawai">Pegawai</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/keyboard">Keyboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">UAS</a>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+
   <title>Achmad Faiz - 5026221100</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +31,6 @@
 <script src="/js/regular.js"></script>
 </head>
 <body>
-
 <div class="container">
   <h2>Achmad Faiz - 5026221100</h2>
   <h3>@yield('tulisan1')</h3>

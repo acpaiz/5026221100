@@ -81,3 +81,5 @@ Route::get('/keyboard/cari','App\Http\Controllers\KeyboardDBController@cari');
 Route::get('/keyboard/update-status','App\Http\Controllers\KeyboardDBController@updateStatus');
 
 Route::patch('/keyboard/update-status/{kodekeyboard}', [KeyboardDBController::class, 'updateStatus']);
+
+Route::get('/pagecounter','App\Http\Controllers\PagecounterController@index');

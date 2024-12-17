@@ -27,6 +27,7 @@
                         <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                         <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                         <li class="nav__item"><a href="#work" class="nav__link">Experiences</a></li>
+                        <li class="nav__item"><a href="#progress" class="nav__link">Progress</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                     </ul>
                 </div>
@@ -276,7 +277,7 @@
             </section>
 
              <!--===== PROGRESS =====-->
-          <section class="education section" id="education">
+          <section class="education section" id="progress">
             <h2 class="section-title">Progress</h2>
 
             <div class="education__container bd-grid">
@@ -287,6 +288,10 @@
 
                 <div class="education__content">
                     <a href="style" target="#" class="button education__button">Week 2</a>
+                </div>
+
+                <div class="education__content">
+                    <a href="pegawai" target="#" class="button education__button">Laravel Content</a>
                 </div>
 
             </div>

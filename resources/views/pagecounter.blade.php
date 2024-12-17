@@ -1,9 +1,9 @@
 @extends('template')
 
-@section('tulisan1', 'Pagecounter')
+@section('tulisan1', 'Data Pegawai')
 
 @section('konten')
-    <div>
-        Anda Pengunjung ke : {{}}
-    </div>
+<div>
+    <h3>View Count: {{ $counter->jumlah }}</h3>
+</div>
 @endsection

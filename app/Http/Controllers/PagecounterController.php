@@ -5,14 +5,24 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class PagecounterController extends Controller
+class PageViewController extends Controller
 {
-    public function index()
+    public function counter()
     {
-        DB::table('pagecounter')->increment('jumlah');
-        $counter = DB::table('pagecounter')->get();
-        return view('pagecounter',['pagecounter' => $counter]);
+
+        $viewCount = DB::table('viewcount')->first();
+
+        if ($viewCount) {
+
+            DB::table('viewcount')->where('ID', $viewCount->ID)->increment('jumlah');
+        } else {
+
+            DB::table('viewcount')->insert(['jumlah' => 1]);
+        }
+
+
+        $counter = DB::table('viewcount')->first();
+
+        return view('counter', ['counter' => $counter]);
     }
-
-
 }

@@ -83,3 +83,23 @@ Route::get('/keyboard/update-status','App\Http\Controllers\KeyboardDBController@
 Route::patch('/keyboard/update-status/{kodekeyboard}', [KeyboardDBController::class, 'updateStatus']);
 
 Route::get('/pagecounter','App\Http\Controllers\PagecounterController@index');
+
+//latihan
+// AA
+Route::get('/chat','App\Http\Controllers\LatihanAAController@index');
+
+// BB
+Route::get('/mahasiswa','App\Http\Controllers\MahasiswaDBController@index');
+Route::get('/mahasiswa/edit/{id}','App\Http\Controllers\MahasiswaDBController@edit');
+Route::post('/mahasiswa/update','App\Http\Controllers\MahasiswaDBController@update');
+Route::get('/mahasiswa/read/{id}','App\Http\Controllers\MahasiswaDBController@read');
+
+// CC
+use App\Http\Controllers\KategoriController;
+Route::get('/combo', [KategoriController::class, 'index'])->name('latihancc');
+Route::post('/combo', [KategoriController::class, 'show'])->name('latihancckirim');
+
+// UAS
+Route::get('/uas','App\Http\Controllers\UASController@index');
+Route::get('/uas/tambah','App\Http\Controllers\UASController@tambah');
+Route::post('/uas/store','App\Http\Controllers\UASController@store');
